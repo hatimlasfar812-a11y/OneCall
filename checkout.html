@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Checkout | One Call</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="checkout.css">
+
+</head>
+
+<body>
+
+<header class="top-header">
+
+<button id="backBtn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</button>
+
+<h2>Checkout</h2>
+
+</header>
+
+<main class="container">
+
+<!-- Address -->
+
+<div class="card">
+
+<div class="card-header">
+
+<h3>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Delivery Address
+
+</h3>
+
+<button id="changeAddress">
+
+Change
+
+</button>
+
+</div>
+
+<p id="deliveryAddress">
+
+Choose your address
+
+</p>
+
+</div>
+
+<!-- Order -->
+
+<div class="card">
+
+<h3>
+
+<i class="fa-solid fa-bag-shopping"></i>
+
+Order Summary
+
+</h3>
+
+<div id="orderItems"></div>
+
+</div>
+
+<!-- Notes -->
+
+<div class="card">
+
+<h3>
+
+<i class="fa-solid fa-note-sticky"></i>
+
+Delivery Notes
+
+</h3>
+
+<textarea
+id="orderNote"
+placeholder="Add delivery instructions..."></textarea>
+
+</div>
+
+<!-- Payment -->
+
+<div class="card">
+
+<h3>
+
+<i class="fa-solid fa-credit-card"></i>
+
+Payment Method
+
+</h3>
+
+<label class="payment active">
+
+<input
+type="radio"
+name="payment"
+value="cash"
+checked>
+
+<div>
+
+<strong>Cash on Delivery</strong>
+
+<p>Pay when you receive your order.</p>
+
+</div>
+
+</label>
+
+<label class="payment disabled">
+
+<input
+type="radio"
+disabled>
+
+<div>
+
+<strong>Credit / Debit Card</strong>
+
+<span class="coming">
+
+Coming Soon
+
+</span>
+
+</div>
+
+</label>
+
+<label class="payment disabled">
+
+<input
+type="radio"
+disabled>
+
+<div>
+
+<strong>Wallet</strong>
+
+<span class="coming">
+
+Coming Soon
+
+</span>
+
+</div>
+
+</label>
+
+</div>
+
+<!-- Coupon -->
+
+<div class="card">
+
+<h3>
+
+<i class="fa-solid fa-ticket"></i>
+
+Coupon
+
+</h3>
+
+<div class="coupon-box">
+
+<input
+type="text"
+placeholder="Coupon code">
+
+<button>
+
+Apply
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Price -->
+
+<div class="card">
+
+<div class="price-row">
+
+<span>Subtotal</span>
+
+<b id="subtotal">
+
+0 DH
+
+</b>
+
+</div>
+
+<div class="price-row">
+
+<span>Delivery Fee</span>
+
+<b>
+
+12 DH
+
+</b>
+
+</div>
+
+<div class="price-row">
+
+<span>Service Fee</span>
+
+<b>
+
+2 DH
+
+</b>
+
+</div>
+
+<hr>
+
+<div class="price-row total">
+
+<span>Total</span>
+
+<b id="totalPrice">
+
+0 DH
+
+</b>
+
+</div>
+
+</div>
+
+</main>
+
+<div class="bottom-bar">
+
+<button id="placeOrder">
+
+Place Order
+
+</button>
+
+</div>
+
+<script type="module"
+src="checkout.js"></script>
+
+</body>
+
+</html>

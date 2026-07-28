@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Choose Address</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<link rel="stylesheet"
+href="map.css">
+
+</head>
+
+<body>
+
+<header class="top-bar">
+
+<button id="backBtn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</button>
+
+<h2>
+
+Choose Delivery Address
+
+</h2>
+
+</header>
+
+<div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search address...">
+
+</div>
+
+<div id="searchResults"></div>
+
+<div id="map"></div>
+
+<button id="gpsBtn">
+
+<i class="fa-solid fa-location-crosshairs"></i>
+
+</button>
+
+<div class="bottom-sheet">
+
+<div class="sheet-handle"></div>
+
+<h3>
+
+Delivery Address
+
+</h3>
+
+<p id="selectedAddress">
+
+Searching location...
+
+</p>
+
+<div class="extra-inputs">
+
+<input
+type="text"
+id="building"
+placeholder="Building / Apartment">
+
+<input
+type="text"
+id="floor"
+placeholder="Floor">
+
+<input
+type="text"
+id="note"
+placeholder="Delivery note">
+
+</div>
+
+<button
+id="confirmBtn">
+
+Confirm Address
+
+</button>
+
+</div>
+
+<script
+src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script
+src="map.js">
+</script>
+
+</body>
+
+</html>
