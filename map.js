@@ -195,3 +195,42 @@ map.on("click", e => {
   );
   
 });
+const sheet = document.querySelector(".bottom-sheet");
+const handle = document.querySelector(".sheet-handle");
+
+let expanded = false;
+
+function toggleSheet() {
+  expanded = !expanded;
+  
+  if (expanded) {
+    sheet.classList.add("expanded");
+  } else {
+    sheet.classList.remove("expanded");
+  }
+}
+
+handle.addEventListener("click", toggleSheet);
+
+// Swipe
+let startY = 0;
+
+sheet.addEventListener("touchstart", e => {
+  startY = e.touches[0].clientY;
+});
+
+sheet.addEventListener("touchend", e => {
+  
+  const endY = e.changedTouches[0].clientY;
+  
+  if (startY - endY > 50) {
+    sheet.classList.add("expanded");
+    expanded = true;
+  }
+  
+  if (endY - startY > 50) {
+    sheet.classList.remove("expanded");
+    expanded = false;
+  }
+  
+});
